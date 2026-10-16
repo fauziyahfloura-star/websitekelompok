@@ -1,9 +1,241 @@
-@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+:root {
+    --maroon: #8E203B;
+    --dark: #252528;
+    --gray: #E5E7EB;
+    --light: #F5F5F6;
+    --white: #FFFFFF;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--light);
+    color: var(--dark);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 5%;
+    background: var(--dark);
+    color: white;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--gray);
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+}
+
+.brand h2 {
+    font-size: 17px;
+    color: white;
+}
+
+.brand p {
+    font-size: 11px;
+    color: #D1D1D5;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    font-size: 13px;
+}
+
+.nav-menu a:hover {
+    color: #D5A0AD;
+}
+
+.login-btn,
+.btn {
+    display: inline-block;
+    background: var(--maroon);
+    color: white;
+    padding: 11px 20px;
+    border-radius: 25px;
+    border: none;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+/* HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: 30px;
+    padding: 55px 7%;
+    background: linear-gradient(120deg, #E5E7EB, #FFFFFF);
+    min-height: 400px;
+}
+
+.hero-label {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--maroon);
+    color: white;
+    border-radius: 25px;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.15;
+    color: var(--maroon);
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 23px;
+    margin-bottom: 14px;
+}
+
+.hero p {
+    line-height: 1.8;
+    color: #55565B;
+    margin-bottom: 22px;
+    max-width: 480px;
+}
+
+.hero-visual {
+    min-height: 270px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #444449, #202023);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 15px 35px #00000018;
+}
+
+.hero-visual .motor {
+    font-size: 100px;
+    margin-bottom: 12px;
+}
+
+.hero-visual h3 {
+    font-size: 23px;
+    color: #F1F1F3;
+}
+
+.hero-visual p {
+    color: #D1D1D5;
+    margin: 8px 0 0;
+}
+
+/* MENU CEPAT */
+.quick-menu {
+    margin: -25px 5% 35px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background: white;
+    padding: 20px 12px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px #0000000D;
+}
+
+.quick-item {
+    text-align: center;
+    padding: 12px;
+    border-right: 1px solid #E5E5E7;
+}
+
+.quick-item:last-child {
+    border-right: none;
+}
+
+.quick-icon {
+    display: grid;
+    place-items: center;
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    background: var(--gray);
+    color: var(--maroon);
+    font-size: 25px;
+}
+
+.quick-item h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.quick-item p {
+    font-size: 11px;
+    color: #66666B;
+    line-height: 1.5;
+}
+
+/* JUDUL BAGIAN */
+.section {
+    padding: 0 5% 40px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.section-heading h2 {
+    color: var(--maroon);
+    font-size: 25px;
+}
+
+.section-heading p {
+    color: #66666B;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.see-all {
+    color: var(--maroon);
+    font-weight: 800;
+    font-size: 13px;
+}
+
