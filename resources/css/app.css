@@ -239,3 +239,340 @@ button {
     font-size: 13px;
 }
 
+/* PRODUK */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 16px;
+    padding: 14px;
+    border: 1px solid #E3E3E6;
+    transition: 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #00000010;
+}
+
+.product-picture {
+    height: 120px;
+    background: var(--gray);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 55px;
+    margin-bottom: 13px;
+}
+
+.product-card h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    font-size: 11px;
+    color: #77777C;
+    min-height: 30px;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.price {
+    color: var(--maroon);
+    font-weight: 900;
+    font-size: 13px;
+}
+
+.cart-btn {
+    background: var(--maroon);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+}
+
+/* KATEGORI SPARE PART */
+.category-section {
+    background: var(--gray);
+    border-radius: 22px;
+    margin: 0 5% 40px;
+    padding: 25px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 13px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px 8px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.category-card:hover {
+    background: #F5E7EA;
+    transform: translateY(-3px);
+}
+
+.category-card span {
+    display: block;
+    font-size: 32px;
+    color: var(--maroon);
+    margin-bottom: 8px;
+}
+
+.category-card p {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* KEUNGGULAN BENGKEL */
+.why-us {
+    margin: 0 5% 40px;
+    background: var(--dark);
+    color: white;
+    border-radius: 20px;
+    padding: 28px;
+}
+
+.why-us h2 {
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.benefit {
+    border-left: 1px solid #55555A;
+    padding-left: 15px;
+}
+
+.benefit span {
+    color: #D1D5DB;
+    font-size: 28px;
+}
+
+.benefit h3 {
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.benefit p {
+    color: #D1D1D5;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* FORM BOOKING */
+.booking-section {
+    margin: 0 5% 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 30px;
+    align-items: center;
+    border: 1px solid #E5E5E7;
+}
+
+.booking-section h2 {
+    font-size: 27px;
+    color: var(--maroon);
+    margin-bottom: 10px;
+}
+
+.booking-section p {
+    color: #66666B;
+    line-height: 1.7;
+}
+
+.booking-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+.booking-form label {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    margin-top: 6px;
+    padding: 12px;
+    border: 1px solid #D9D9DE;
+    border-radius: 10px;
+    background: #FAFAFB;
+    outline-color: var(--maroon);
+}
+
+.booking-form button,
+#bookingMessage {
+    grid-column: 1 / -1;
+}
+
+#bookingMessage {
+    color: var(--maroon);
+    font-weight: 800;
+    font-size: 13px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 30px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+footer h3 {
+    font-size: 17px;
+}
+
+footer p,
+footer small {
+    color: #D1D1D5;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.footer-slogan {
+    text-align: center;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 1000px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .brand {
+        margin-right: auto;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .quick-menu {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .quick-item {
+        border-right: none;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .benefit-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 650px) {
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .nav-menu {
+        width: 100%;
+        gap: 13px;
+        font-size: 12px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 35px 6%;
+    }
+
+    .hero-visual {
+        min-height: 200px;
+    }
+
+    .hero-visual .motor {
+        font-size: 70px;
+    }
+
+    .quick-menu {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -15px;
+    }
+
+    .quick-item {
+        border-bottom: 1px solid #E5E5E7;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit {
+        border-left: none;
+        border-top: 1px solid #55555A;
+        padding: 15px 0 0;
+    }
+
+    .booking-section {
+        grid-template-columns: 1fr;
+        padding: 22px;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-form button,
+    #bookingMessage {
+        grid-column: auto;
+    }
+
+    footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-slogan {
+        text-align: left;
+    }
+}
