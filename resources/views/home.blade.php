@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bengkel Nyonya Ahwei</title>
 
-   @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
 
@@ -13,7 +13,8 @@
     <header class="navbar">
         <a href="#home" class="brand">
             <img src="{{ asset('images/logo.png') }}"
-             alt="Logo Bengkel Nyonya Ahwei" class="brand-logo">
+                 alt="Logo Bengkel Nyonya Ahwei"
+                 class="brand-logo">
 
             <div>
                 <h2>Bengkel Nyonya Ahwei</h2>
@@ -22,7 +23,7 @@
         </a>
 
         <nav class="nav-menu">
-            <a href="#active" href="#home">Beranda</a>
+            <a href="#home">Beranda</a>
             <a href="#layanan">Layanan</a>
             <a href="#sparepart">Spare Part</a>
             <a href="#booking">Booking</a>
@@ -30,20 +31,16 @@
         </nav>
 
         <div class="nav-actions">
-            <a href="#sparepart" class="search-btn">⌕ Cari spare part...</a>
+            <a href="#sparepart" class="search-btn">
+                ⌕ Cari spare part...
+            </a>
             <a href="#sparepart" class="cart-link">🛒</a>
             <a href="#footer" class="login-btn">♟ Login / Daftar</a>
-</div>
+        </div>
     </header>
 
     <!-- HERO -->
     <section class="hero" id="home">
-        <div class="hero-person">
-            <img src="{{ asset('images/nyonya-ahwei.jpg') }}" 
-            alt="Pemilik Bengkel Nyonya Ahwei">
-            <p class="hero-note">Motor Sehat, Perjalanan Lancar!</p>
-        </div>
-
         <div class="hero-copy">
             <span class="hero-label">Selamat Datang di</span>
             <h1>Bengkel Nyonya Ahwei</h1>
@@ -54,17 +51,7 @@
             </p>
             <a href="#layanan" class="btn">Lihat Layanan →</a>
         </div>
-
-        <div class="hero-workshop">
-            <img src="{{ asset('images/workshop.jpg') }}"
-            alt="Workshop Bengkel Nyonya Ahwei">
-            <div class="workshop-caption">
-            <strong>Reparasi &amp; Service</strong> 
-            <span>spare part berkualitas</span>
-           
-        </div>
-</div>
-    </section>
+    </section>   
 
     <!-- MENU LAYANAN -->
     <section class="quick-menu" id="layanan">
