@@ -12,7 +12,7 @@
     <!-- NAVBAR -->
     <header class="navbar">
         <a href="#home" class="brand">
-            <img src="{{ asset('images/logo.png') }}"
+            <img src="{{ asset('images/profile nyonya ahwei.png') }}"
                  alt="Logo Bengkel Nyonya Ahwei"
                  class="brand-logo">
 
@@ -41,6 +41,10 @@
 
     <!-- HERO -->
     <section class="hero" id="home">
+        <img src="{{ asset('images/banner-bg.png') }}"
+        alt="Banner Bengkel Nyonya Ahwei"
+        class="hero-bg">
+
         <div class="hero-copy">
             <span class="hero-label">Selamat Datang di</span>
             <h1>Bengkel Nyonya Ahwei</h1>
@@ -114,7 +118,7 @@
         <div class="product-grid" id="productGrid">
 
             <article class="product-card" data-category="busi">
-                <img src="{{ asset('images/busi.jpg') }}" alt="Busi NGK">
+                <img src="{{ asset('images/busi.png') }}" alt="Busi NGK">
                 <div class="product-info">
                     <h3>Busi NGK</h3>
                     <p>Honda Beat / Vario 110</p>
@@ -126,7 +130,7 @@
             </article>
 
             <article class="product-card" data-category="ban">
-                <img src="{{ asset('images/ban.jpg') }}" alt="Ban Tubeless">
+                <img src="{{ asset('images/ban.png') }}" alt="Ban Tubeless">
                 <div class="product-info">
                     <h3>Ban Tubeless</h3>
                     <p>90/90 - 14 (Depan/Belakang)</p>
@@ -138,7 +142,7 @@
             </article>
 
             <article class="product-card" data-category="aki">
-                <img src="{{ asset('images/aki.jpg') }}" alt="Aki Motor">
+                <img src="{{ asset('images/aki.png') }}" alt="Aki Motor">
                 <div class="product-info">
                     <h3>Aki Motor</h3>
                     <p>GS Astra GTZ5S</p>
@@ -150,7 +154,7 @@
             </article>
 
             <article class="product-card" data-category="shockbreaker">
-                <img src="{{ asset('images/shockbreaker.jpg') }}" alt="Shockbreaker">
+                <img src="{{ asset('images/shockbreaker.png') }}" alt="Shockbreaker">
                 <div class="product-info">
                     <h3>Shockbreaker</h3>
                     <p>Honda Beat</p>
@@ -162,7 +166,7 @@
             </article>
 
             <article class="product-card" data-category="kampas-rem">
-                <img src="{{ asset('images/kampas-rem.jpg') }}" alt="Kampas Rem">
+                <img src="{{ asset('images/kampas-rem.png') }}" alt="Kampas Rem">
                 <div class="product-info">
                     <h3>Kampas Rem</h3>
                     <p>Honda Vario 110</p>
@@ -175,7 +179,7 @@
 
             <!-- PRODUK OLI -->
             <article class="product-card" data-category="oli">
-                <img src="{{ asset('images/oli-a.jpg') }}" alt="Oli Mesin A">
+                <img src="{{ asset('images/oli-a.png') }}" alt="Oli Mesin A">
                 <div class="product-info">
                     <h3>Oli Mesin Matic</h3>
                     <p>Oli untuk motor matic</p>
@@ -187,7 +191,7 @@
             </article>
 
             <article class="product-card" data-category="oli">
-                <img src="{{ asset('images/oli-b.jpg') }}" alt="Oli Mesin B">
+                <img src="{{ asset('images/oli-b.png') }}" alt="Oli Mesin B">
                 <div class="product-info">
                     <h3>Oli Mesin Premium</h3>
                     <p>Perlindungan mesin harian</p>
@@ -199,7 +203,7 @@
             </article>
 
             <article class="product-card" data-category="oli">
-                <img src="{{ asset('images/oli-c.jpg') }}" alt="Oli Mesin C">
+                <img src="{{ asset('images/oli-c.png') }}" alt="Oli Mesin C">
                 <div class="product-info">
                     <h3>Oli Mesin 10W-40</h3>
                     <p>Pelumas mesin motor</p>
@@ -211,7 +215,7 @@
             </article>
 
             <article class="product-card" data-category="lampu">
-                <img src="{{ asset('images/lampu.jpg') }}" alt="Lampu Motor">
+                <img src="{{ asset('images/lampu.png') }}" alt="Lampu Motor">
                 <div class="product-info">
                     <h3>Lampu Motor LED</h3>
                     <p>Penerangan motor</p>
@@ -223,7 +227,7 @@
             </article>
 
             <article class="product-card" data-category="rantai">
-                <img src="{{ asset('images/rantai.jpg') }}" alt="Rantai dan Gir">
+                <img src="{{ asset('images/rantai-gear.png') }}" alt="Rantai dan Gir">
                 <div class="product-info">
                     <h3>Rantai &amp; Gir</h3>
                     <p>Komponen penggerak motor</p>
