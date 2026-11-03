@@ -39,16 +39,15 @@ button {
 }
 
 /* NAVBAR */
-
-/* NAVBAR */
 .navbar {
     width: 100%;
-    min-height: 75px;
+    min-height: 68px;
     padding: 8px 4%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 22px;
+    box-sizing: border-box;
     background: #fffdfb;
     border-bottom: 1px solid #f2e4df;
     position: relative;
@@ -60,22 +59,25 @@ button {
     align-items: center;
     gap: 10px;
     flex-shrink: 0;
+    text-decoration: none;
 }
 
 .brand-logo {
-    width: 55px;
-    height: 55px;
+    width: 58px;
+    height: 58px;
     object-fit: contain;
-    flex-shrink: 0;
+    border-radius: 50%;
 }
 
 .brand h2 {
+    margin: 0;
     color: #97133b;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 800;
 }
 
 .brand p {
+    margin: 2px 0 0;
     color: #77717a;
     font-size: 11px;
 }
@@ -84,11 +86,13 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 23px;
 }
 
 .nav-menu a {
+    padding: 10px 0;
     color: #68636a;
+    text-decoration: none;
     font-size: 12px;
     font-weight: 600;
     white-space: nowrap;
@@ -96,6 +100,7 @@ button {
 
 .nav-menu a:first-child {
     color: #a30e3e;
+    border-bottom: 2px solid #a30e3e;
 }
 
 .nav-actions {
@@ -109,30 +114,32 @@ button {
 .search-btn {
     display: inline-flex;
     align-items: center;
-    min-width: 0;
-    padding: 10px 14px;
+    min-width: 225px;
+    padding: 10px 16px;
     border: 1px solid #eadfdc;
     border-radius: 25px;
     color: #77717a;
     font-size: 11px;
+    text-decoration: none;
     white-space: nowrap;
 }
 
 .cart-link {
     color: #97133b;
+    text-decoration: none;
     font-size: 20px;
 }
 
 .login-btn {
-    padding: 11px 17px;
+    padding: 12px 18px;
     border-radius: 25px;
     background: #a30e3e;
     color: white;
     font-size: 11px;
     font-weight: 700;
+    text-decoration: none;
     white-space: nowrap;
 }
-
 
 .brand-logo {
     width: 56px;
@@ -142,74 +149,94 @@ button {
 }
 
 /* HERO */
-
-/* HERO BANNER */
 .hero {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    align-items: center;
-    gap: 15px;
-    padding: 25px 5%;
-    min-height: 350px;
+    position: relative;
     width: 100%;
+    height: 285px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
     overflow: hidden;
-    background: linear-gradient(120deg, #FFF7F1, #FCE4DF);
+    padding: 20px 4%;
 }
 
 .hero-bg {
-    display: block;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: 315px;
+    height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 12px;
+    z-index: 0;
+    background-repeat: no-repeat;
 }
 
 .hero-copy {
-    width: 100%;
-    min-width: 0;
+    position: relative;
+    z-index: 2;
+    width: 34%;
+    margin-left: 33%;
+    transform: translateX(0);
+}
+
+.hero-person {
+    position: absolute;
+    left: 2%;
+    top: 0;
+    width: 18%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-note {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    max-width: 130px;
+    color: #97133b;
+    font-size: 14px;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .hero-label {
-    display: table;
-    padding: 8px 20px;
-    background: var(--maroon);
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 20px;
+    background: #a30e3e;
     color: white;
-    border-radius: 25px;
     font-size: 13px;
-    margin: 0 auto 16px;
+    font-weight: 600;
 }
 
 .hero-copy h1 {
-    color: #a30e3e;
-    font-size: clamp(24px, 3vw, 36px);
+    font-size: 36px;
     line-height: 1.15;
-    margin-bottom: 8px;
 }
 
 .hero-copy h2 {
+    margin: 0 0 8px;
     color: #97133b;
-    font-size: clamp(17px, 1.7vw, 23px);
-    margin-bottom: 8px;
+    font-size: clamp(17px, 1.7vw, 25px);
 }
 
 .hero-copy p {
+    margin: 0 0 12px;
     color: #5e5860;
     font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
 .hero-copy .btn {
     display: inline-block;
-    padding: 10px 22px;
+    padding: 10px 26px;
     border-radius: 25px;
     background: #a30e3e;
     color: white;
+    text-decoration: none;
     font-size: 13px;
     font-weight: 700;
 }
-
 
 .hero-workshop {
     position: absolute;
@@ -552,30 +579,18 @@ footer small {
 }
 
 /* RESPONSIVE TABLET */
-
-/* RESPONSIVE TABLET */
 @media (max-width: 1000px) {
     .navbar {
-        flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
+    }
+
+    .brand {
+        margin-right: auto;
     }
 
     .nav-menu {
-        gap: 14px;
         flex-wrap: wrap;
-    }
-
-    .nav-actions {
-        gap: 8px;
-    }
-
-    .hero {
-        grid-template-columns: 1.5fr 1fr;
-        padding: 25px 4%;
-    }
-
-    .hero-bg {
-        height: 260px;
+        justify-content: center;
     }
 
     .quick-menu {
@@ -595,48 +610,29 @@ footer small {
     }
 }
 
-
-/* RESPONSIVE HP */
-
 /* RESPONSIVE HP */
 @media (max-width: 650px) {
     .navbar {
-        padding: 12px 5%;
-        flex-wrap: wrap;
-    }
-
-    .brand-logo {
-        width: 45px;
-        height: 45px;
+        padding: 15px 5%;
     }
 
     .nav-menu {
         width: 100%;
-        order: 3;
         gap: 13px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .nav-actions {
-        gap: 7px;
-    }
-
-    .search-btn {
-        display: none;
+        font-size: 12px;
     }
 
     .hero {
         grid-template-columns: 1fr;
-        padding: 25px 5%;
+        padding: 35px 6%;
     }
 
-    .hero-bg {
-        height: 220px;
+    .hero-visual {
+        min-height: 200px;
     }
 
-    .hero-copy h1 {
-        font-size: 28px;
+    .hero-visual .motor {
+        font-size: 70px;
     }
 
     .quick-menu {
