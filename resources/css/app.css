@@ -24,6 +24,8 @@ body {
     font-family: 'Nunito', sans-serif;
     background: var(--light);
     color: var(--dark);
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 a {
@@ -340,6 +342,8 @@ button {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 16px;
+    width: 100%;
+    min-width: 0;
 }
 
 .product-card {
@@ -348,6 +352,7 @@ button {
     padding: 14px;
     border: 1px solid #E3E3E6;
     transition: 0.2s;
+    min-width: 0;
 }
 
 .product-card img {
@@ -355,6 +360,7 @@ button {
     height: 150px;
     object-fit: contain;
     display: block;
+    width: 100%;
 }
 
 .product-card:hover {
