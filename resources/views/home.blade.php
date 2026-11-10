@@ -23,12 +23,16 @@
         </a>
 
         <nav class="nav-menu">
-            <a href="#home">Beranda</a>
-            <a href="#layanan">Layanan</a>
-            <a href="#sparepart">Spare Part</a>
-            <a href="#booking">Booking</a>
-            <a href="#tentang">Tentang</a>
-        </nav>
+    <a href="#home">Beranda</a>
+    <a href="#layanan">Layanan</a>
+    <a href="#sparepart">Spare Part</a>
+    <a href="#booking">Booking</a>
+    <a href="#tentang">Tentang</a>
+
+    @auth
+    <a href="#profil">Profil</a>
+    @endauth
+    </nav>
 
         <div class="nav-actions">
             <a href="#sparepart" class="search-btn">
@@ -87,15 +91,6 @@
         </a>
 
         <a href="#footer" class="quick-item">
-            <span class="quick-icon">📋</span>
-            <div>
-                <h3>Riwayat Servis</h3>
-                <p>Pantau catatan servis motor.</p>
-            </div>
-            <span class="arrow">➜</span>
-        </a>
-
-        <a href="#footer" class="quick-item">
             <span class="quick-icon">📍</span>
             <div>
                 <h3>Lokasi Bengkel</h3>
@@ -109,10 +104,9 @@
     <section class="section" id="sparepart">
         <div class="section-heading">
             <div>
-                <h2>🌿 Rekomendasi Produk</h2>
-                <p>Spare part pilihan untuk motor kamu.</p>
+                <h2>🌿 Produk Terlaris</h2>
+                <p>Spare part pilihan yang paling diminati pelanggan.</p>
             </div>
-            <button class="see-all" id="showAll">Lihat Semua →</button>
         </div>
 
         <div class="product-grid" id="productGrid">
@@ -305,6 +299,25 @@
             </a>
         </div>
     </section>
+
+    @auth
+<section class="section" id="profil">
+    <div class="section-heading">
+        <div>
+            <h2>Profil Saya</h2>
+            <p>Informasi akun dan riwayat servis kamu.</p>
+        </div>
+    </div>
+
+    <h3>{{ Auth::user()->name }}</h3>
+    <p>{{ Auth::user()->email }}</p>
+
+    <div class="history-card">
+        <h3>📋 Riwayat Servis</h3>
+        <p>Catatan servis motor yang pernah kamu lakukan.</p>
+    </div>
+</section>
+@endauth
 
     <!-- FOOTER -->
     <footer id="footer">
